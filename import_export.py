@@ -154,3 +154,21 @@ class OBJECT_OT_load_lightfield(bpy.types.Operator):
 
         bpy.ops.scene.create_lightfield('EXEC_DEFAULT')
         return {'FINISHED'}
+
+classes = (
+    OBJECT_OT_save_lightfield,
+    OBJECT_OT_load_lightfield,
+)
+
+def register():
+    from bpy.utils import register_class
+    for cls in classes:
+        register_class(cls)
+
+def unregister():
+    from bpy.utils import unregister_class
+    for cls in reversed(classes):
+        unregister_class(cls)
+
+if __name__ == "__main__":
+    register()

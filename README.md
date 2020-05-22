@@ -45,3 +45,5 @@ The 4D Light Field Benchmark was jointly created by the University of Konstanz a
  organization={Springer} 
  } 
  
+# Modifications
+fixes/API changes for blender 2.80
